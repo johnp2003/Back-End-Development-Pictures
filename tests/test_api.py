@@ -52,6 +52,7 @@ def test_post_picture(picture, client):
     assert res.status_code == 200
     assert res.json['length'] == 11
 
+
 def test_post_picture_duplicate(picture, client):
     # create a brand new picture to upload
     res = client.post("/picture", data=json.dumps(picture),
